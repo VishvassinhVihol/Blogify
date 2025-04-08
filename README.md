@@ -1,12 +1,37 @@
-# React + Vite
+# 📖 Blogify
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Blogify** is a modern blog web application where users can **create, read, and manage blog posts** with images.  
+It is built using **React**, styled with **Tailwind CSS**, and powered by **Appwrite** as the backend.  
+The app features **user authentication**, **image uploads**, **blog post creation/editing**, and **dynamic routing**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 📝 Create, edit, and delete blog posts
+- 🖼 Upload cover images with blogs
+- 🔐 User Authentication
+- 🧭 Routing with React Router
+- ⚙️ State management using Redux Toolkit
+- 📁 Appwrite backend for storage and database
+- 🧑‍💻 Responsive design with Tailwind CSS
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+| Frontend     | Backend         | Tools & Libraries        |
+|--------------|------------------|---------------------------|
+| React.js     | Appwrite (Cloud) | Redux Toolkit             |
+| Tailwind CSS |                  | React Router DOM          |
+|              |                  | React Hook Form (optional)|
+
+---
+
+## 📷 Screenshots
+
+<!-- Replace these with your actual uploaded screenshots -->
+![Screenshot 1](https://github.com/user-attachments/assets/5a76fb86-8ba4-4d72-b77d-64dc1cddea11)
+![Screenshot 2](https://github.com/user-attachments/assets/c9f421bf-3766-4f44-a4aa-1176ea4b6326)
+![Screenshot 3](https://github.com/user-attachments/assets/c54b21b1-6a27-48f3-a578-3e5eb6792c83)
+![Screenshot 4](https://github.com/user-attachments/assets/33ef400d-ccfc-49a6-ab5f-929316b8f990)
