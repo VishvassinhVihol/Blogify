@@ -12,6 +12,7 @@ import AddPost from './pages/AddPost'
 import EditPost from './pages/EditPost'
 import Post from './pages/Post'
 import Home from './pages/Home'
+import DefaultCard from './Components/DefaultCard/DefaultCard'
 
 const router = createBrowserRouter([
 
@@ -41,7 +42,15 @@ const router = createBrowserRouter([
 
         //authentiacation true means there is need of authentiacation
         element: (<AuthLayout authentication={true}>
-          <AllPosts />
+          <AllPosts allPosts={true} />
+        </AuthLayout>)
+      },
+      {
+        path: 'your-posts',
+
+        //authentiacation true means there is need of authentiacation
+        element: (<AuthLayout authentication={true}>
+          <AllPosts allPosts={false} />
         </AuthLayout>)
       },
       {
@@ -66,6 +75,14 @@ const router = createBrowserRouter([
         //authentiacation true means there is need of authentiacation
         element: (<AuthLayout authentication={true}>
           <Post/>
+        </AuthLayout>)
+      },
+      {
+        path: 'defaultCard',
+
+        //authentiacation true means there is need of authentiacation
+        element: (<AuthLayout authentication={true}>
+          <DefaultCard/>
         </AuthLayout>)
       },
     ]

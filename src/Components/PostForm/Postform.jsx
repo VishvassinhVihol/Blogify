@@ -23,6 +23,8 @@ const Postform = ({ post }) => {
 
   const navigate = useNavigate()
   const userData = useSelector(state => state.auth.userData)//from authSlice
+  console.log(userData);
+  
 
   
  
@@ -58,7 +60,7 @@ const Postform = ({ post }) => {
 
       //step 1 : upload file
       const file =  data.image && data.image.length > 0 ? await appWriteService.uploadFile(data.image[0]) : null
-      console.log("userId in Postform",userData.userData.$id)
+      // console.log("userId in Postform",userData.userData.$id)
       
 
 
@@ -87,7 +89,7 @@ const Postform = ({ post }) => {
   const slugTransform = useCallback((value) => {
     //transform title to slug
     if (value && typeof value === 'string') {
-      return value.trim().toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
+      return value.trim().toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '').slice(0,36)
 
     }
     return ''
@@ -114,8 +116,8 @@ const Postform = ({ post }) => {
   }, [watch, slugTransform, setValue])
   return (
     <>
-      <form onSubmit={handleSubmit(submit)} className="flex flex-wrap">
-            <div className="w-2/3 px-2">
+      <form onSubmit={handleSubmit(submit)} className="flex flex-wrap px-2 justify-center ">
+            <div className="md:w-2/3 px-2">
                 <Input
                     label="Title :"
                     placeholder="Title"
@@ -133,7 +135,7 @@ const Postform = ({ post }) => {
                 />
                 <RTE label="Content :" name="content" control={control} defaultValue={getValues("content")} />
             </div>
-            <div className="w-1/3 px-2">
+            <div className="md:w-1/3 px-2">
                 <Input
                     label="Featured Image :"
                     type="file"
@@ -156,7 +158,7 @@ const Postform = ({ post }) => {
                     className="mb-4"
                     {...register("status", { required: true })}
                 />
-                <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full">
+                <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full ">
                     {post ? "Update" : "Submit"}
                 </Button>
             </div>
